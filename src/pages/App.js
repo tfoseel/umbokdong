@@ -1,8 +1,9 @@
 import './App.css';
+import QRScanner from '..//components/QRScanner.js'
 
 function App() {
   return (
-    <div>Hello world</div>
+    <QRScanner />
   );
 }
 
