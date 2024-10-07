@@ -10,6 +10,8 @@
     "qr-scanner": "^1.4.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-kakao-maps-sdk": "^1.1.27",
+    "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -41,6 +43,7 @@
   },
   "homepage": "https://tfoseel.github.io/umbokdong/",
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "tailwindcss": "^3.4.13"
   }
 }
