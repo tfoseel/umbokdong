@@ -23,21 +23,21 @@ const PrivateRoute = ({ children }) => {
 const routerData = [
   {
     id: 0,
-    path: "/umbokdong/signin",
+    path: "/signin",
     label: "로그인",
     element: <SignIn />,
     withAuth: false,
   },
   {
     id: 1,
-    path: "/umbokdong/signup",
+    path: "/signup",
     label: "회원가입",
     element: <SignUp />,
     withAuth: false,
   },
   {
     id: 2,
-    path: "/umbokdong/home",
+    path: "/home",
     label: "로그인 후 지도 화면",
     element: <Home />,
     withAuth: false,
@@ -79,7 +79,7 @@ const AppRoutes = () => (
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/umbokdong">
       <AppRoutes />
     </Router>
   </React.StrictMode>
