@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import './index.css';
 
 import SignIn from './pages/SignIn';
@@ -42,7 +42,7 @@ const routerData = [
   },
   {
     id: -1,
-    path: "*",  // Catch-all route for unmatched paths
+    path: "*",
     label: "로그인",
     element: <SignIn />,
     withAuth: false,
@@ -77,8 +77,8 @@ const AppRoutes = () => (
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <HashRouter>
       <AppRoutes />
-    </Router>
+    </HashRouter>
   </React.StrictMode>
 );

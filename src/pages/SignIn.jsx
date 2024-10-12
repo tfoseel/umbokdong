@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
@@ -49,7 +51,7 @@ const SignIn = () => {
                     </div>
                 </form>
                 <p className="mt-6 text-center text-gray-600">
-                    Don’t have an account? <a href="/umbokdong/signup" className="text-indigo-600 hover:underline">Sign Up</a>
+                    Don’t have an account? <Link to="/signup" className="text-indigo-600 hover:underline">Sign Up</Link>
                 </p>
             </div>
         </div>
