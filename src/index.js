@@ -9,13 +9,11 @@ import Home from './pages/Home';
 
 // Sample AuthGuard and PrivateRoute components
 const AuthGuardLayout = ({ children }) => {
-  // Replace this with actual authentication logic
-  const isAuthenticated = false; // Change as necessary for actual auth
+  const isAuthenticated = false; // Replace with actual authentication logic
   return isAuthenticated ? children : <SignIn />;
 };
 
 const PrivateRoute = ({ children }) => {
-  // This route will be accessible to everyone (public routes)
   return children;
 };
 
@@ -44,7 +42,7 @@ const routerData = [
   },
   {
     id: -1,
-    path: "/*",
+    path: "*",  // Catch-all route for unmatched paths
     label: "로그인",
     element: <SignIn />,
     withAuth: false,
@@ -79,7 +77,7 @@ const AppRoutes = () => (
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <AppRoutes />
     </Router>
   </React.StrictMode>
