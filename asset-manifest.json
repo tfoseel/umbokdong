@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/umbokdong/static/css/main.60149673.css",
-    "main.js": "/umbokdong/static/js/main.70a508bb.js",
+    "main.js": "/umbokdong/static/js/main.a437dc61.js",
     "index.html": "/umbokdong/index.html",
     "main.60149673.css.map": "/umbokdong/static/css/main.60149673.css.map",
-    "main.70a508bb.js.map": "/umbokdong/static/js/main.70a508bb.js.map"
+    "main.a437dc61.js.map": "/umbokdong/static/js/main.a437dc61.js.map"
   },
   "entrypoints": [
     "static/css/main.60149673.css",
-    "static/js/main.70a508bb.js"
+    "static/js/main.a437dc61.js"
   ]
 }
