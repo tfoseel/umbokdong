@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [email, setEmail] = useState('umbokdong@kaist.ac.kr');
+    const [password, setPassword] = useState('11111111');
     const navigate = useNavigate();
 
     const handleLogin = (e) => {
