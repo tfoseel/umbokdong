@@ -1,13 +1,16 @@
 {
   "files": {
-    "main.css": "/umbokdong/static/css/main.2016f4d7.css",
-    "main.js": "/umbokdong/static/js/main.b01f64f2.js",
+    "main.css": "/umbokdong/static/css/main.a25470de.css",
+    "main.js": "/umbokdong/static/js/main.589b5b38.js",
+    "static/js/451.604d4be3.chunk.js": "/umbokdong/static/js/451.604d4be3.chunk.js",
     "index.html": "/umbokdong/index.html",
-    "main.2016f4d7.css.map": "/umbokdong/static/css/main.2016f4d7.css.map",
-    "main.b01f64f2.js.map": "/umbokdong/static/js/main.b01f64f2.js.map"
+    "static/media/qr-frame.svg": "/umbokdong/static/media/qr-frame.04a81d7ead670a2dd8b671d6703bbfda.svg",
+    "main.a25470de.css.map": "/umbokdong/static/css/main.a25470de.css.map",
+    "main.589b5b38.js.map": "/umbokdong/static/js/main.589b5b38.js.map",
+    "451.604d4be3.chunk.js.map": "/umbokdong/static/js/451.604d4be3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2016f4d7.css",
-    "static/js/main.b01f64f2.js"
+    "static/css/main.a25470de.css",
+    "static/js/main.589b5b38.js"
   ]
 }
