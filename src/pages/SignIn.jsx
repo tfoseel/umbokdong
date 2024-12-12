@@ -1,61 +1,61 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-
-const SignIn = () => {
+function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
+    const handleLogin = (e) => {
         e.preventDefault();
-        // Handle sign-in logic here
-        console.log('Email:', email, 'Password:', password);
+
+        // Mockup login logic
+        if (email === 'umbokdong@kaist.ac.kr' && password === '11111111') {
+            navigate('/home');
+        } else {
+            alert('Invalid email or password');
+        }
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md w-full max-w-xs sm:max-w-md">
-                <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                        <label htmlFor="email" className="block text-gray-700">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
-                            placeholder="Enter your email"
-                        />
+        <div className="flex items-center justify-center min-h-screen bg-white">
+            <div className="w-full max-w-sm">
+                <div className="flex justify-center mb-6">
+                    <div className="w-16 h-16 flex items-center justify-center bg-gray-200 rounded-full">
+                        <span className="text-2xl font-bold">U</span>
                     </div>
-                    <div>
-                        <label htmlFor="password" className="block text-gray-700">Password</label>
+                </div>
+                <h2 className="text-2xl font-bold text-center mb-6">Umbokdong</h2>
+                <form onSubmit={handleLogin} className="space-y-4">
+                    <input
+                        type="email"
+                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <div className="relative">
                         <input
                             type="password"
-                            id="password"
+                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            required
-                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring focus:ring-indigo-200"
-                            placeholder="Enter your password"
                         />
                     </div>
-                    <div className="text-center">
-                        <button
-                            type="submit"
-                            className="w-full px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
-                        >
-                            Sign In
-                        </button>
-                    </div>
+                    <button
+                        type="submit"
+                        className="w-full py-2 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg hover:from-blue-500 hover:to-purple-600"
+                    >
+                        Sign in
+                    </button>
                 </form>
-                <p className="mt-6 text-center text-gray-600">
-                    Don’t have an account? <Link to="/signup" className="text-indigo-600 hover:underline">Sign Up</Link>
+                <p className="mt-4 text-center text-gray-600">
+                    Don't have an account? <Link to="/signup" className="text-indigo-600 hover:underline">Sign Up</Link>
                 </p>
             </div>
         </div>
     );
-};
+}
 
-export default SignIn;
+export default LoginPage;
