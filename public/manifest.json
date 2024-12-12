@@ -8,6 +8,9 @@
       "sizes": "192x192"
     }
   ],
+  "permissions": [
+    "camera"
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
