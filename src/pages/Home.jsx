@@ -115,7 +115,7 @@ const Home = () => {
                 classNames="slide"
                 unmountOnExit
             >
-                <div className="p-6 bg-white rounded-t-3xl shadow-lg -mt-6 absolute bottom-0 left-0 w-full z-50">
+                <div className="p-6 bg-white rounded-t-3xl shadow-lg -mt-6 absolute bottom-0 left-0 w-full z-50" onClick={() => setIsVisible(false)}>
                     <div className="mb-4">
                         <h2 className="text-2xl font-bold">{selectedBike?.label}</h2>
                         <p className="text-green-600 font-semibold">Available</p>

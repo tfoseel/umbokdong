@@ -17,6 +17,28 @@ const QrReader = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const navigate = useNavigate();
 
+
+    const [cameraStatus, setCameraStatus] = useState('unknown');
+
+    const requestCameraAccess = async () => {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            setCameraStatus('granted');
+            console.log('Camera access granted:', stream);
+        } catch (error) {
+            setCameraStatus('denied');
+            console.error('Error accessing the camera:', error);
+        }
+    };
+
+    const checkPermission = () => {
+        navigator.permissions.query({ name: 'camera' }).then((result) => {
+            setCameraStatus(result.state);
+        }).catch((error) => {
+            console.error('Permission API not supported', error);
+        });
+    };
+    
     // Success
     const onScanSuccess = (result) => {
         console.log(result);
